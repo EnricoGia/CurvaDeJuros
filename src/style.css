@@ -1,0 +1,57 @@
+body{
+    background-color: #CCCCCC;
+    font-family: 'Open Sans', sans-serif;
+}
+
+button{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+#label__taxa-de-juros{
+    margin-left: 40px;
+}
+#input__taxa-de-juros{
+    margin-right: 40px;
+}
+#main__block{
+    margin-top: 100px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;   
+}
+
+#main__options{
+    display:flex;
+    align-items: center;
+    margin-top: 30px;
+    background-color: white;
+    width: 800px;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    height: 20px;
+
+}
+
+#main__options button{
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    margin-left: 8px;
+    transition: 0.2s;
+}
+#main__options button:hover{
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+    margin-left: 8px;
+}
+#main{
+    width: 1000px;
+    margin: 0px auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
