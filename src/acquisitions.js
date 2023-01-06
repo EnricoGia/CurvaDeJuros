@@ -30,10 +30,8 @@ const chart = new Chart(
 );
 
 export function AddTaxaDeJuros(taxa) {
-  console.log(chart)
   const dados = CalculaTaxaDeJuros(taxa)
   const labels = dados.map((number, index) => { return `${index}º Ano` })
-  console.log(labels)
   addData(chart, labels, dados, taxa)
 }
 
@@ -49,7 +47,6 @@ function CalculaTaxaDeJuros(taxa) {
       dados[i] = dados[i - 1] * (1 + taxa)
     }
   }
-  console.log(dados)
   return dados
 }
 
@@ -59,7 +56,6 @@ export function removeAno() {
     element.data.pop()
   })
   chart.update()
-  console.log("Atualizando chart")
 }
 
 export function removeTaxaDeJuros(){
@@ -88,9 +84,6 @@ function addData(chart, label, dados, taxa) {
 
   if (data.labels.length == 0) {
     data.labels = label
-  }
-  else {
-    console.log("Vazio")
   }
   data.datasets.push(newDataset);
   chart.update();

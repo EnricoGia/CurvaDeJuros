@@ -561,12 +561,10 @@ const chart = new (0, _autoDefault.default)(document.getElementById("acquisition
     }
 });
 function AddTaxaDeJuros(taxa) {
-    console.log(chart);
     const dados = CalculaTaxaDeJuros(taxa);
     const labels = dados.map((number, index)=>{
         return `${index}º Ano`;
     });
-    console.log(labels);
     addData(chart, labels, dados, taxa);
 }
 function CalculaTaxaDeJuros(taxa) {
@@ -575,7 +573,6 @@ function CalculaTaxaDeJuros(taxa) {
     ];
     if (data.labels.length == 0) for(let i = 1; i < 9; i++)dados[i] = dados[i - 1] * (1 + taxa);
     else for(let i1 = 1; i1 < data.labels.length; i1++)dados[i1] = dados[i1 - 1] * (1 + taxa);
-    console.log(dados);
     return dados;
 }
 function removeAno() {
@@ -584,7 +581,6 @@ function removeAno() {
         element.data.pop();
     });
     chart.update();
-    console.log("Atualizando chart");
 }
 function removeTaxaDeJuros() {
     data.datasets.pop();
@@ -608,7 +604,6 @@ function addData(chart, label, dados, taxa) {
         taxa: taxa
     };
     if (data.labels.length == 0) data.labels = label;
-    else console.log("Vazio");
     data.datasets.push(newDataset);
     chart.update();
 }

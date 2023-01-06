@@ -5,8 +5,7 @@ const buttonAdicionar = document.querySelector("#taxa-de-juros__adicionar")
 const buttonRemoverAno = document.querySelector("#ano__remover")
 const buttonAdicionarAno = document.querySelector("#ano__adicionar")
 const buttonRemover = document.querySelector("#taxa-de-juros__remover")
-console.log(buttonRemoverAno)
-console.log(buttonAdicionar)
+
 
 buttonAdicionar.addEventListener("click",()=>{
     var taxa = inputAdicionar.value/100
@@ -15,7 +14,6 @@ buttonAdicionar.addEventListener("click",()=>{
 
 buttonRemoverAno.addEventListener("click",()=>{
     removeAno();
-    console.log("Removendo ano...")
 })
 
 buttonAdicionarAno.addEventListener("click",()=>{
